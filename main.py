@@ -35,8 +35,7 @@ def start_handler(update, context):
     update.message.reply_sticker('CAACAgUAAxkBAAED9kRiDq_GkOHuRHPeVv4IRhsvy4NtbwACqQQAAncUyFftN80YUiyXnyME')
 
 def about_handler(update, context):
-    update.message.reply_sticker('CAACAgUAAxkBAAED9kZiDq_LFrib38c7DYu3jNz3ebsolgACJAUAAuTb4FdKtjtZGQ2ukiME')
-    update.message.reply_text('[🏖 TikTok Download API 🏖](https://github.com/Single-Developers/API/blob/main/tiktok/Note.md)\n\n[🔥 SL Developers </> 🇱🇰](https://t.me/SL_Developers)',parse_mode=_ParseMode)
+    update.message.reply_text('Hecho por @brapark 🔥',parse_mode=_ParseMode)
     
 # ◇─────────────────────────────────────────────────────────────────────────────────────◇
 
@@ -47,7 +46,7 @@ def Download_Video(Link,update, context):
     no_watermark=None
     watermark=None
 
-    status_msg=message.reply_text('🚀 Descargando desde el servidor')
+    status_msg=message.reply_text('🚀 Descargando...')
     status_sticker=message.reply_sticker('CAACAgUAAxkBAAED9jhiDqYeGjENlCjftByz0au6n4YAASEAAnUEAALpa8lXL9cvxeTK-2AjBA')
 
     # Getting Download Links Using API
@@ -64,15 +63,15 @@ def Download_Video(Link,update, context):
     
     caption_text="""◇───────────────◇
 
-✅ Video descargado {}
+✅ {}
 
 ◇───────────────◇"""
     
     # Uploading Downloaded Videos to Telegram
     print('Uploading Videos')
-    status_msg.edit_text('☘️ 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖....')
-    message.reply_video(video=no_watermark,supports_streaming=True,caption=caption_text.format('sin marca de agua'),parse_mode=_ParseMode)
-    message.reply_video(video=watermark,supports_streaming=True,caption=caption_text.format('con marca de agua'),parse_mode=_ParseMode)
+    status_msg.edit_text('🚀 Subiendo a Telegram...')
+    message.reply_video(video=no_watermark,supports_streaming=True,caption=caption_text.format('Sin marca'),parse_mode=_ParseMode)
+    message.reply_video(video=watermark,supports_streaming=True,caption=caption_text.format('Con marca'),parse_mode=_ParseMode)
 
     # Task Done ! So, Deleteing Status Messages
     status_msg.delete()
