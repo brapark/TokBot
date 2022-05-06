@@ -44,7 +44,6 @@ def Download_Video(Link,update, context):
     message=update.message
     req=None
     no_watermark=None
-    watermark=None
 
     status_msg=message.reply_text('🚀 Descargando...')
     status_sticker=message.reply_sticker('CAACAgUAAxkBAAED9jhiDqYeGjENlCjftByz0au6n4YAASEAAnUEAALpa8lXL9cvxeTK-2AjBA')
@@ -53,7 +52,6 @@ def Download_Video(Link,update, context):
     try:
        req=requests.get(API+Link).json()
        no_watermark=req['no_watermark']
-       watermark= req['watermark']
        print('Download Links Generated \n\n\n'+str(req)+'\n\n\n')
     except:
         print('Download Links Generate Error !!!')
@@ -61,17 +59,12 @@ def Download_Video(Link,update, context):
         status_sticker.delete()
         return
     
-    caption_text="""
-    
-✅ {}
-
-"""
+    caption_text=""""""
     
     # Uploading Downloaded Videos to Telegram
     print('Uploading Videos')
     status_msg.edit_text('🚀 Subiendo a Telegram...')
     message.reply_video(video=no_watermark,supports_streaming=True,caption=caption_text.format('Sin marca de agua'),parse_mode=_ParseMode)
-    message.reply_video(video=watermark,supports_streaming=True,caption=caption_text.format('Con marca de agua'),parse_mode=_ParseMode)
 
     # Task Done ! So, Deleteing Status Messages
     status_msg.delete()
