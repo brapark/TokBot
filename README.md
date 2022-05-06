@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://iconscout.com/icon/tiktok-3855932"><img src="images/tiktok.png" align="center" height=365 alt="Tok Mate Bot" />
+<a href="https://telegra.ph/file/6e61ae012f3c95ec04ce0.png"><img src="images/tiktok.png" align="center" height=365 alt="Tok Mate Bot" />
 </p>
 
 <p align="center">
