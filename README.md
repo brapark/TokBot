@@ -13,7 +13,7 @@
 
 - Súper rápido y compatible con todo tipo de enlaces TikTok.
 - Descarga cualquier video de TikTok sin marca de agua.
-- Escrito en python.
+- Escrito en Python.
 - Caché de videos para que las futuras solicitudes de ese video se puedan atender más rápido.
 
 ---
