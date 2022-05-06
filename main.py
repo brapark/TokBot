@@ -47,7 +47,7 @@ def Download_Video(Link,update, context):
     no_watermark=None
     watermark=None
 
-    status_msg=message.reply_text('🚀 DOᗯᑎᒪOᗩᗪIᑎG Video TO Sᕮᖇᐯᕮᖇ ....')
+    status_msg=message.reply_text('🚀 Descargando desde el servidor')
     status_sticker=message.reply_sticker('CAACAgUAAxkBAAED9jhiDqYeGjENlCjftByz0au6n4YAASEAAnUEAALpa8lXL9cvxeTK-2AjBA')
 
     # Getting Download Links Using API
@@ -64,18 +64,15 @@ def Download_Video(Link,update, context):
     
     caption_text="""◇───────────────◇
 
-✅ Successfully Downloaded {} Video 🔰
-
-🔰 Powerd by : [🏖 TikTok Download API 🏖](https://github.com/Single-Developers/API/blob/main/tiktok/Note.md)
-[🔥 Single Developers </> ](https://t.me/SingleDevelopers) Corporation ©️
+✅ Video descargado {}
 
 ◇───────────────◇"""
     
     # Uploading Downloaded Videos to Telegram
     print('Uploading Videos')
     status_msg.edit_text('☘️ 𝚄𝚙𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚘 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖....')
-    message.reply_video(video=no_watermark,supports_streaming=True,caption=caption_text.format('No Watermark'),parse_mode=_ParseMode)
-    message.reply_video(video=watermark,supports_streaming=True,caption=caption_text.format('Watermark'),parse_mode=_ParseMode)
+    message.reply_video(video=no_watermark,supports_streaming=True,caption=caption_text.format('sin marca de agua'),parse_mode=_ParseMode)
+    message.reply_video(video=watermark,supports_streaming=True,caption=caption_text.format('con marca de agua'),parse_mode=_ParseMode)
 
     # Task Done ! So, Deleteing Status Messages
     status_msg.delete()
